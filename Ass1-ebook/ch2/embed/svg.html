@@ -1,14 +1,17 @@
-<svg version="1.1" height="200" width="200"
+<svg version="1.1" height="100" width="100"
  xmlns="http://www.w3.org/2000/svg">
  <defs>
-    <!-- arrowhead marker definition -->
+    <!-- arrowhead marker definition. Src: https://developer.mozilla.org/en-US/docs/Web/SVG/Element/marker -->
     <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5"
         markerWidth="4" markerHeight="4"
         orient="auto-start-reverse">
       <path d="M 0 0 L 10 5 L 0 10 z" />
     </marker>
  </defs>
- 
+   
+  <polygon points="50,50 60,10 85,45" 
+  style="fill:red;stroke:purple;stroke-width:1" />
+   
  <line x1="50" y1="5" x2="50" y2="95"
  style="stroke:rgb(0,0,0);stroke-width:2" 
  marker-start="url(#arrow)" />
@@ -16,10 +19,7 @@
  <line x1="5" y1="50" x2="95" y2="50"
  style="stroke:rgb(0,0,0);stroke-width:2" 
   marker-end="url(#arrow)" />
-  
-  <polygon points="50,50 60,10 85,45" 
-  style="fill:red;stroke:purple;stroke-width:1" />
-  
+
  <text x="90" y="45" fill="black">x</text>
  <text x="40" y="10" fill="black">y</text> 
  
