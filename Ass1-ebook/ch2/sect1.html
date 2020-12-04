@@ -1,106 +1,162 @@
-<!DOCTYPE html>
+<!DOCTYPE html [
+<!ENTITY nbsp "&#160;">
+]>
 <html class="role-ebook-page" xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta charset="UTF-8" />
-
-    <title>How to Express the Formula with MathML</title>
-  </head>
-
-  <body>
-	<p><pre>&lt;explain how to express the formula with MathML and embed the
-	MathML in an ebook equation element, which is a special figure element with
-	class value "role-equation"&gt;</pre></p>
-	<p>
-	<figure class="role-equation"> <figcaption></figcaption>
-		<div>
-			<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
-				<!-- Start first part of equation -->
-				<mrow> 
-					<mi> T </mi>
-				</mrow>
-				<!-- End of first part of equation -->	
-				<mo> = </mo>
-				<!-- Start of second part of equation -->	
+	<head>
+		<meta charset="UTF-8" />
+		
+		<title>How to Express the Formula with MathML</title>
+	</head>
+	
+	
+	
+	<body>
+		<header>
+			<h1>How the formula is created</h1>
+		</header>
+		
+		To represent the formula, we must first consider the T on the left
+		side of the equation. This can be represented very simply by the &lt;mi&gt;
+		T &lt;/mi&gt;. For the "=" we now also use a relatively simple &lt;mo&gt; =
+		&lt;/mo&gt;. Now comes the middle part of the equation, which is the
+		difficult part. First of all we have to use &lt;mfrac&gt; to represent a
+		fraction. Here we expect a numerator and denominator. The numbers are now
+		defined with &lt;mi&gt; 1 &lt;/mi&gt; and &lt;mi&gt; 2 &lt;/mi&gt;. Next, we
+		set the amount lines, which will be set again later in the same way after
+		closing the brackets. To place the brackets around the matrix correctly,
+		&lt;mrow&gt; must be used. This allows a bracket replacement that covers the
+		entire matrix. Finally, the matrix is closed again with brackets. To display
+		the matrix, the &lt;mtable&gt; element is used. Thereby &lt;mtr&gt; forms a
+		new row entry. The indices are created by using &lt;msub&gt;. The first
+		entry is the variable and the second entry is the index. In the third part
+		of the equation, we use practically the same parts as in the middle part,
+		except that a simple subtraction is sufficient and the use of &lt;msub&gt;.
+		To insert our text now into our ebook, we have to use the namespace of
+		MathML in our chapter for the correct display of the formula. Everything
+		within the &lt;math&gt; tag will be recognized accordingly. In the following
+		you can see how our finished formula looks like!
+		<header>
+			<h1>How the formula looks like</h1>
+		</header>
+		
+		<math xmlns="http://www.w3.org/1998/Math/MathML">
+			<!-- Start first part of equation -->
+			
+			<mrow>
+				<mi>T</mi>
+			</mrow>
+			
+			<!-- End of first part of equation -->
+			
+			<mo>=</mo>
+			
+			<!-- Start of second part of equation -->
+			
+			<mrow>
+				<mfrac>
+					<mn>1</mn>
+					
+					<mn>2</mn>
+				</mfrac>
+				
+				<mo>|</mo>
+				
+				<!-- Matrix start -->
+				
 				<mrow>
-					<mfrac>							
-						<mn> 1 </mn>
-						<mn> 2 </mn>
-					</mfrac>
-		
-					<mo> | </mo>
-		
-					<!-- Matrix start -->
-					<mrow>
-						<mo> ( </mo>
-							<mtable>
-								<mtr> 
-									<msub>
-										<mi> x </mi>
-										<mi> B </mi>
-									</msub>
-									<msub>
-										<mi> x </mi>
-										<mi> C </mi>
-									</msub>
-								</mtr>
-								<mtr> 
-									<msub>
-										<mi> y </mi>
-										<mi> B </mi>
-									</msub>
-									<msub>
-										<mi> y </mi>
-										<mi> C </mi>
-									</msub>
-								</mtr>
-							</mtable>
-						<mo> ) </mo>
-					</mrow>
+					<mo>(</mo>
+					
+					<mtable>
+						<mtr>
+							<msub>
+								<mi>x</mi>
+								
+								<mi>B</mi>
+							</msub>
+							
+							<msub>
+								<mi>x</mi>
+								
+								<mi>C</mi>
+							</msub>
+						</mtr>
+						
+						<mtr>
+							<msub>
+								<mi>y</mi>
+								
+								<mi>B</mi>
+							</msub>
+							
+							<msub>
+								<mi>y</mi>
+								
+								<mi>C</mi>
+							</msub>
+						</mtr>
+					</mtable>
+					
+					<mo>)</mo>
+				</mrow>
+				
 				<!-- Matrix end  -->
-		
-					<mo> | </mo>
-				</mrow>
-<!-- End of Second part of equation -->	
-				<mo> = </mo>
-					<!-- Start of third part of equation -->
-				<mrow>
-		
+				
+				<mo>|</mo>
+			</mrow>
+			
+			<!-- End of Second part of equation -->
+			
+			<mo>=</mo>
+			
+			<!-- Start of third part of equation -->
+			
+			<mrow>
 				<!-- 1/2 -->
-					<mfrac>
-						<mn> 1 </mn>
-						<mn> 2 </mn>
-					</mfrac>
-		
-					<mo> | </mo>
-					<mrow>
+				
+				<mfrac>
+					<mn>1</mn>
+					
+					<mn>2</mn>
+				</mfrac>
+				
+				<mo>|</mo>
+				
+				<mrow>
 					<!-- x_B -->
-						<msub>
-							<mi> x </mi>
-							<mi> B </mi>
-						</msub>
-						<msub>
-							<mi> y </mi>
-							<mi> C </mi>
-						</msub>
-				
-						<mo> - </mo>
-				
-						<msub>
-							<mi> x </mi>
-							<mi> C </mi>
-						</msub>
-						<msub>
-							<mi> y </mi>
-							<mi> B </mi>
-						</msub>
-					</mrow>
-					<mo> | </mo>
-		
+					
+					<msub>
+						<mi>x</mi>
+						
+						<mi>B</mi>
+					</msub>
+					
+					<msub>
+						<mi>y</mi>
+						
+						<mi>C</mi>
+					</msub>
+					
+					<mo>-</mo>
+					
+					<msub>
+						<mi>x</mi>
+						
+						<mi>C</mi>
+					</msub>
+					
+					<msub>
+						<mi>y</mi>
+						
+						<mi>B</mi>
+					</msub>
 				</mrow>
-<!-- End of third part of equation  -->
+				
+				<mo>|</mo>
+			</mrow>
+			
+			<!-- End of third part of equation  -->
 		</math>
-		</div>
-	</figure>
-	</p>
-   </body>
+	</body>
+	
+	
 </html>

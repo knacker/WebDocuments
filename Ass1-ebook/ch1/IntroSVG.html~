@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html class="role-ebook-page" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="UTF-8" />
+		
+		<title>Using SVG in ebook</title>
+	</head>
+	
+	<body><p>	
+		<header>
+			<h1>Creating a SVG</h1>
+		</header>
+		Next, we are going to talk about what a SVG is and discuss the elements, that are going to be used for our example. So what is a SVG actually? A SVG is a Scalable Vector graphic, that is recommended, like MathML, by the W3C. SVG's have a few advantages over regular png's, such as smaller size aswell as the ability, to scale with the screen size. In the following table you can see, what elements of SVG can be used to create a coordinate system and a polygon.
+		<header>
+			<h1>Elements that are going to be used</h1>
+		</header>
+		<table>
+			<thead>
+				<tr>
+					<th>&lt;element&gt;</th>
+					<th>Description<br></br></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>&lt;polygon&gt;<br></br></td>
+					<td>The polygon element is being used to create an object, that contains atleast <br></br>three sides. It is made of straight lines and the shape is closed.</td>
+				</tr>
+				<tr>
+					<td>&lt;defs&gt;</td>
+					<td>Using the &lt;defs&gt; element, we can store graphical objects, which can be used <br></br>at a later time.</td>
+				</tr>
+				<tr>
+					<td>&lt;line&gt;</td>
+					<td>This can be used to create a simple line, that connects 2 points.</td>
+				</tr>
+				<tr>
+					<td>&lt;text&gt;<br></br></td>
+					<td>Using the &lt;text&gt; element, we can write simple text in the SVG namespace.</td>
+				</tr>
+				<tr>
+					<td>&lt;marker&gt;</td>
+					<td>The &lt;marker&gt; element is a graphic, that is being used to draw arrowheads on<br></br>a given element. In our example, that is the &lt;line&gt; element, so we can create a<br></br>better looking coordinate system. To attach the marker, we can use for example<br></br>marker-start.<br></br></td>
+				</tr>
+			</tbody>
+		</table>
+	</p></body>
+</html>

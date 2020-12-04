@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html class="role-ebook-page" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Introduction to the XML Mind ebook Format</title>
+	</head>
+	<header>
+		<h1>Introducing ebook</h1>
+	</header>
+	<body>The XML Mind ebook is a set of HTML pages turned into a self-contained ebook. We are going to use it, to create an ebook using our HTML files, that we are going to create in the next paragraps. Using these, we will have a small example for an ebook.</body>
+</html>

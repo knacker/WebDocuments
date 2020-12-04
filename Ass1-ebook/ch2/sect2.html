@@ -6,47 +6,27 @@
     <title>How to Draw the Triangle with SVG</title>
   </head>
 
-  <body>
-	<header>
-		<h1>Simple steps to create an SVG </h1>
-	</header>
-  
-	<p><pre>A triangle with SVG can be drawn using the polygon element. &lt;polygon points="50,50 60,10 85,45"&gt;. 
-	The values shown are the tuples(50,50) (60,10) (85,45) stand for the coordinates, where each point of the triangle is located in the grid. 
-	Using style="stroke:rgb(0,0,0);stroke-width:2" you can set the desired style you want to use for your triangle. 
-	In this particular example, the fill of the triangle is black, which is represented by the rgb value (0,0,0). 
-	The line thickness can be set using stroke-width, which is set here to 2.</pre></p>
-	
-	<header>
-		<h1>How it looks like</h1>
- 
-		<svg version="1.1" height="100" width="100"
-			xmlns="http://www.w3.org/2000/svg">
-		<defs>
-			<!-- arrowhead marker definition. Src: https://developer.mozilla.org/en-US/docs/Web/SVG/Element/marker -->
-			<marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5"
-				markerWidth="4" markerHeight="4"
-				orient="auto-start-reverse">
-				<path d="M 0 0 L 10 5 L 0 10 z" />
-			</marker>
-		</defs>
-   
-		<polygon points="50,50 60,10 85,45" 
-		style="fill:red;stroke:purple;stroke-width:1" />
-   
-		<line x1="50" y1="5" x2="50" y2="95"
-		style="stroke:rgb(0,0,0);stroke-width:2" 
-		marker-start="url(#arrow)" />
- 
-		<line x1="5" y1="50" x2="95" y2="50"
-		style="stroke:rgb(0,0,0);stroke-width:2" 
-		marker-end="url(#arrow)" />
+  <body><header> <h1>Simple steps to create an SVG </h1> </header> <p>A
+  triangle with SVG can be drawn using the polygon element. &lt;polygon
+  points="50,50 60,10 85,45"&gt;. The values shown are the tuples(50,50)
+  (60,10) (85,45) stand for the coordinates, where each point of the triangle
+  is located in the grid. Using style="stroke:rgb(0,0,0);stroke-width:2" you
+  can set the desired style you want to use for your triangle. In this
+  particular example, the fill of the triangle is black, which is represented
+  by the rgb value (0,0,0). The line thickness can be set using stroke-width,
+  which is set here to 2.</p> <header> <h1>How it looks like</h1><svg
+  version="1.1" width="109" xmlns="http://www.w3.org/2000/svg"><defs>
+      <!-- arrowhead marker definition. Src: https://developer.mozilla.org/en-US/docs/Web/SVG/Element/marker -->
 
-		<text x="90" y="45" fill="black">x</text>
-		<text x="40" y="10" fill="black">y</text> 
- 
-		</svg>
-	</header>
-  </body>
-  
+      <marker id="arrow" markerHeight="4" markerWidth="4" refX="5" refY="5"
+              viewBox="0 0 10 10">
+        <path d="M 0 0 L 10 5 L 0 10 z" />
+      </marker>
+    </defs> <polygon points="50,50 60,10 85,45"
+  style="fill:red;stroke:purple;stroke-width:1" /> <line
+  marker-start="url(#arrow)" style="stroke:rgb(0,0,0);stroke-width:2" x1="50"
+  x2="50" y1="5" y2="95" /> <line marker-end="url(#arrow)"
+  style="stroke:rgb(0,0,0);stroke-width:2" x1="5" x2="95" y1="50" y2="50" />
+  <text fill="black" x="90" y="45">x</text> <text fill="black" x="40"
+  y="10">y</text></svg> </header></body>
 </html>
